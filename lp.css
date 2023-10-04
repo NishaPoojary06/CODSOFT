@@ -1,0 +1,82 @@
+body
+{
+	box-sizing:border-box;
+
+	background-position:center;
+	/*background-size:cover;*/
+	background-color:rgb(255, 179, 153);
+
+}
+h1
+{
+	font-family:fantasy;
+	color:#800000;
+}
+.hd
+{
+	display:flex;
+	flex-wrap:wrap;
+	position:relative;
+	background-color:white;
+	/*background-image:url(https://formspal.com/frontend/assets/img/pdf-landing-2/what-is-form.svg);*/
+	box-sizing:border box;
+	padding-right:15px;
+	padding:120px;
+	font-size:20px;
+}
+.hd pre
+{
+	
+	font-family:Lucida Handwriting;
+	color:#ff8c66/*rgb(255, 179, 153)*/;
+}
+.cta
+{
+	padding-left:130px
+	
+}
+	
+button
+{
+	background-color:#cc6699;
+	padding:15px;
+	font-size:15px;
+	border-color:#c6538c;
+	border-radius:14px;
+	}
+.service 
+{
+	display:flex;
+	justify-content:space-between;
+	padding:10px;
+}
+.service ul
+{
+
+	padding:15px;
+	display:inline-flex;/*items in same line*/
+	list-style:none;	/*remove list dots*/
+}
+.service ul li
+{
+	border:2px solid;
+	text-decoration:none;
+	width:200px;
+	border-radius:15px;
+	box-shadow:5px 5px 2px;
+	text-align:center;
+}
+.service ul li:hover
+{
+	background:
+ #ff8c66 /*#ff5050*/;
+}
+a
+{
+	text-decoration:none;
+	color:white;
+}
+button:hover
+{
+	background-color:#c6538c;
+}
