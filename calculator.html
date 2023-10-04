@@ -1,0 +1,87 @@
+<html>
+	<head><title>calculator</title>
+		
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="calstyle.css"/>
+		
+	</head>	
+		
+	<body>
+		<div class="con">
+			<div class="calci">
+				<form>
+				<div class="display">
+				<input type="text" id="inputxt" name="show" placeholder="0"/>
+				</div>
+				<div class="first">
+					<button type="button" id="ac">AC</button>
+					<button type="button" id="c">C</button> 
+					<button type="button">=</button>  
+					 
+				</div>
+				<div>
+					<button type="button">7</button>
+					<button type="button">8</button>
+					<button type="button">9</button>
+					<button id="oper" type="button">/</button>
+				</div>
+				<div>
+					<button type="button">4</button>
+					<button type="button">5</button>
+					<button type="button">6</button>
+					<button id="oper" type="button">*</button>
+				</div>
+				<div>
+					<button type="button">1</button>
+					<button type="button">2</button>
+					<button type="button">3</button>
+					<button id="oper" type="button">+</button>
+				</div>
+				<div>
+					<button type="button">00</button>
+					<button type="button">0</button>
+					<button type="button">.</button>
+					<button id="oper" type="button">-</button>	
+					
+				</div>
+				
+				
+			</div>
+			</form>
+		</div>
+		<script>
+					let input = document.getElementById("inputxt");
+
+			let button = document.querySelectorAll('button');
+			
+			let string = "";
+			let bar=Array.from(button);
+			bar.forEach(button => {
+				button.addEventListener('click',(e) =>{
+					if(e.target.innerHTML == '=' ){
+						string = eval(string);
+						input.value = string;
+					}
+					else if(e.target.innerHTML == 'AC'){
+						string = "";
+						input.value = string;
+					}
+					else if(e.target.innerHTML == 'C'){
+						string = string.substring(0,string.length-1);
+						input.value = string;
+						}
+					else{
+						
+					string += e.target.innerHTML;
+					input.value = string;
+					}
+				})
+			})
+	
+		</script>
+		
+	</body>
+</html>
